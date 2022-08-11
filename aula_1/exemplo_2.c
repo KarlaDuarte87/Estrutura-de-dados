@@ -4,7 +4,6 @@
 int main (){
     char *p, letra = 'f';
 
-    p=&letra;
+    p = &letra;
     printf("valor apontado pro p: %c\n", *p);
-    
 }
