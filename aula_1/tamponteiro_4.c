@@ -1,4 +1,4 @@
-//independere do tipo de ponteiro, não há diferenç a no tamannho de um ponteiro
+//independete do tipo de ponteiro, não há diferença no tamannho de um ponteiro
 //todos ponteiros guardam endereço de memória
 //endereço de memória possuem o mesmo tamanho
 
@@ -14,4 +14,4 @@ int main (void){
     printf("tamanho de p1: %d\n", (int)sizeof(p1));
     printf("tamanho de p2: %d\n", (int)sizeof(p2));
     printf("tamanho de p3: %d\n", (int)sizeof(p3));
-};
+}
