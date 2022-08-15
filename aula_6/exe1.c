@@ -7,15 +7,17 @@ antes de finalizar o programa, deve-se liberar a área de memória alocada.*/
 
 #include<stdio.h>
 #include<stdlib.h>
+#include <conio.h>
 
-int main (){
+int main (void){
     int quant_element;
     int *p;
+    int i;
     printf("digite um a quantidade de elementos do vetor : ");
     scanf ("%d", &quant_element);
 
     //alocar a memória do vet de acordo com a quant de elementos do vet
-    p= (int *)(malloc(quant_element*sizeof(int)));
+    p = (int *)(malloc(quant_element*sizeof(int)));
      
 
     // (quant_element*sizeof(int)) é o mesmo que multiplicar a 
@@ -34,10 +36,25 @@ int main (){
     }
     printf("\n");
 
-}
+
 
 //laço de repetição
-for (int i = 0; i < quant_elemento; i++){
-    printf("o valor armazenado no elemento de indice [%d]: %d", i,p[i]);
-    
+for ( i = 0; i < quant_element; i++)
+{
+    printf("Digite o numero para o indice indice [%d]: ", i);
+    scanf("%d", &p[i]); 
+}
+
+printf("\n");
+
+for (i=0; i< quant_element; i++){
+    printf("Valor armazenado no elemento de indice [%d] = %d\n", i, p[i]);
+}
+
+printf("\n");
+
+//liberar a nmemória alocada
+free(p);
+system ("pause");
+return 0;
 }
