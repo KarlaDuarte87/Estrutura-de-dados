@@ -50,4 +50,3 @@ void imprimir_pilha (No *topo){
     }
     printf("\n------------FIM PILHA----------");
 }
-    
