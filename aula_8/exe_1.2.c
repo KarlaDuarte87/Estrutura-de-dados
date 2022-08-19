@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+
 typedef struct{
     int dia, mes, ano;
 }Data;
@@ -10,22 +11,25 @@ typedef struct {
     Data data;
 }Pessoa;
 
+typedef struct no{
+    Pessoa p;
+    struct no *proximo;
+}No;
+
+
+
 Pessoa ler_pessoa (){
     Pessoa p;
-    printf("\Digite o nome: \n");
-    scanf("%49[^\n]", p.nome);
+    printf("\nDigite o nome: \n");
+    gets("%s49[^\n]", p.nome);
     printf("Digite a data de nascimento dd mm aa: \n");
-    scanf("%d%d%d", &p.data, &p.data.mes. &p.data.mes.ano);
+    scanf("%d %d %d", &p.data, &p.data.mes. &p.data.ano);
     return p;
 }
 void imprimir_pessoa(Pessoa p){
     printf("Nome: %s\nData: %2d/%2d/%4d\n", p.nome, p.data.dia, p.data.mes, p.data.ano);
 }
 
-typedef struct no{
-    Pessoa p;
-    struct no *proximo;
-}No;
 
 No *empilhar(No *topo){
     No *novo = malloc (sizeof(No));
@@ -45,8 +49,25 @@ quando o topo for != de null imprime as informações de cada pessoa
 void imprimir_pilha (No *topo){
     printf("\n-------------PILHA------------");
     while (topo){
-        \imprimir_pessoa(topo->p);
+        imprimir_pessoa(topo->p);
         topo = topo->proximo;
     }
     printf("\n------------FIM PILHA----------");
 }
+
+
+/*
+
+int main (){
+    printf("\n -------------------MENU----------------\n");
+    printf("\n 1-empilhar \n2-desempilhar\n3-imprimir\n4-sair\n");
+switch (opcao)
+{
+case 1
+    break;
+case 2
+    break;
+default:
+    break;
+}
+*/
