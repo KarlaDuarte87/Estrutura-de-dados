@@ -21,12 +21,15 @@ typedef struct no{
 Pessoa ler_pessoa (){
     Pessoa p;
     printf("\nDigite o nome: \n");
-    gets("%s49[^\n]", p.nome);
+    scanf("%s49[^\n]", p.nome);
+    fflush(stdin);
     printf("Digite a data de nascimento dd mm aa: \n");
-    scanf("%d %d %d", &p.data, &p.data.mes. &p.data.ano);
+    scanf("%d%d%d", &p.data.dia, &p.data.mes, &p.data.ano);
+    fflush(stdin);
     return p;
 }
-void imprimir_pessoa(Pessoa p){
+void imprimir_pessoa(Pessoa p)
+{
     printf("Nome: %s\nData: %2d/%2d/%4d\n", p.nome, p.data.dia, p.data.mes, p.data.ano);
 }
 
@@ -56,18 +59,22 @@ void imprimir_pilha (No *topo){
 }
 
 
-/*
-
 int main (){
+    int opcao;
     printf("\n -------------------MENU----------------\n");
-    printf("\n 1-empilhar \n2-desempilhar\n3-imprimir\n4-sair\n");
-switch (opcao)
-{
-case 1
+    printf("\n1-empilhar \n2-desempilhar \n3-imprimir \n4-limpar tudo \n5-sair\n");
+    scanf("%d", &opcao);
+switch (opcao){
+case 1:
+    topo = empilhar(&topo);
     break;
-case 2
+case 2:
+    imprimir_pessoa 
+    break;
+case 3:
+    empilhar;
     break;
 default:
     break;
 }
-*/
+}
