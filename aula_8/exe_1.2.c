@@ -69,11 +69,20 @@ case 1:
     topo = empilhar(&topo);
     break;
 case 2:
-    imprimir_pessoa 
+    remover = desempilhar(&topo);
+    if(remover){
+        printf("\nPessoa removida com sucesso!\n");
+        imprimir_pessoa(remover->p);
+        free(remover);
+    }else
+        print("\nPilha vazia!\n");
+        system("pause");
     break;
 case 3:
-    empilhar;
+    imprimir_pilha(topo);
     break;
+case 4: 
+    while (topo)
 default:
     break;
 }
