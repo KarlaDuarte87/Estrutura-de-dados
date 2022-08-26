@@ -39,7 +39,7 @@ void criar_pilha(Pilha *p){
         printf("\nErro ao alocar memória...\n");
  }
 
-No *desempilhar(Pilha *p){
+/*No *desempilhar(Pilha *p){
     if(p->topo){
         No *remover = p ->topo;
         p-> topo= remover->proximo;
@@ -48,4 +48,8 @@ No *desempilhar(Pilha *p){
     }else
         printf("\nPilha vazia!\n");
         return NULL;
+}*/
+
+No* desempilhar(No **pilha){
+    
 }
