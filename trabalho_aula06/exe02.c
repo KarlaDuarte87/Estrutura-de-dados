@@ -14,7 +14,7 @@ void ler_elementos(int *vetor, int valor){
     int i;
    
     for (i=0; i<valor; i++){
-        printf("Digite o valor do elementos: %d\n", i+1);
+        printf("Digite o valor do elementos: %d: ", i+1);
         scanf("%d", &vetor[i]);
     }
 
